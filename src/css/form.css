@@ -1,0 +1,123 @@
+/* ===== reset ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  background: #ffffff;
+  font-family: "Montserrat", sans-serif;
+
+  /* можно центрировать саму форму на странице */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin: 0;
+}
+
+/* ===== feedback form (Frame "form") ===== */
+.feedback-form {
+  width: 408px;
+  height: 296px;
+
+  background: #ffffff;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 24px;
+
+  /* ВАЖНО: ничего не центрируем внутри формы */
+  align-items: stretch;
+}
+
+/* ===== label block (text + field) ===== */
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  /* подписи слева */
+  align-items: flex-start;
+  text-align: left;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #2e2f42;
+}
+
+/* ===== inputs / textarea ===== */
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+
+  padding: 8px 16px;
+
+  border: 1px solid #808080; /* normal */
+  border-radius: 4px;
+
+  font: inherit;
+  color: #2e2f42;
+  background: transparent;
+
+  outline: none;
+}
+
+.feedback-form input {
+  height: 40px;
+}
+
+.feedback-form textarea {
+  height: 80px;
+  resize: none;
+}
+
+/* ===== states ===== */
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  border-color: #000000; /* hover */
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border-color: #000000; /* active/focus */
+}
+
+/* ===== button ===== */
+.feedback-form button[type="submit"] {
+  /* кнопка по контенту, как в макете */
+  width: 95px;
+  height: 40px;
+
+  padding: 8px 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #4e75ff; /* normal */
+  color: #ffffff;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+/* hover по макету */
+.feedback-form button[type="submit"]:hover {
+  background: #6c8cff;
+}
+
+.feedback-form button[type="submit"]:focus-visible {
+  outline: 2px solid rgba(78, 117, 255, 0.4);
+  outline-offset: 2px;
+}
